@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <style>
+    html,
+    body{
+      width: 100%;
+    }
+    #container{
+      width: 100%;
+      max-width: 996px;
+      margin: 0 auto;
+    }
+    #menu{
+      width: 100%;
+      text-align: justify;
+      margin-bottom: -20px; /* moves up the #menu:after block*/
+    }
+    #menu:after{ /* this block forces the #menu to 100% width */
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      line-height: 0px;
+    }
+    .logo,
+    .nav-item{
+      display: inline-block;
+      background-color: #ddd;
+    }
+
+    @media screen and (max-width: 767px) {
+      .nav-item{
+        float: left;
+        width: 100%;
+      }
+      #menu{
+        position: absolute;
+        z-index: 1030;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+    <nav id="menu">
+      <a href="#" class="logo">LOGO</a>
+      <a href="#" class="nav-item">sloth</a>
+      <a href="#" class="nav-item">monkey</a>
+      <a href="#" class="nav-item">bear</a>
+<!--
+      <a href="#" class="nav-item">rabbit</a>
+      <a href="#" class="nav-item">cow and scheep</a>
+      <a href="#" class="nav-item">all other animals</a>
+ -->
+    </nav>
+  </div>
+  <a href="http://github.com">github.com</a>
+</body>
+</html>
